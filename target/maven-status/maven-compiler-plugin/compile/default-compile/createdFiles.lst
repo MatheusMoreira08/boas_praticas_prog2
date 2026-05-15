@@ -1,0 +1,17 @@
+view/TelaCadastroCliente.class
+view/TelaPrincipal.class
+service/EmailService.class
+service/LoginService.class
+view/TelaCPF.class
+view/TelaEmail.class
+app/Main.class
+view/TelaCNPJ.class
+view/TelaLogin.class
+model/Cliente.class
+service/CNPJService.class
+view/TelaRelatorioClientes.class
+service/ClienteService.class
+view/TelaLerCSV.class
+util/ArquivoUtil.class
+service/CSVService.class
+service/CPFService.class

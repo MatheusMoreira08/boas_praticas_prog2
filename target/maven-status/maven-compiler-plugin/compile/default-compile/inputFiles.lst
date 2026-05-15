@@ -1,0 +1,17 @@
+/mnt/c/code/java/boas_praticas_prog2/src/main/java/app/Main.java
+/mnt/c/code/java/boas_praticas_prog2/src/main/java/model/Cliente.java
+/mnt/c/code/java/boas_praticas_prog2/src/main/java/service/CNPJService.java
+/mnt/c/code/java/boas_praticas_prog2/src/main/java/service/CPFService.java
+/mnt/c/code/java/boas_praticas_prog2/src/main/java/service/CSVService.java
+/mnt/c/code/java/boas_praticas_prog2/src/main/java/service/ClienteService.java
+/mnt/c/code/java/boas_praticas_prog2/src/main/java/service/EmailService.java
+/mnt/c/code/java/boas_praticas_prog2/src/main/java/service/LoginService.java
+/mnt/c/code/java/boas_praticas_prog2/src/main/java/util/ArquivoUtil.java
+/mnt/c/code/java/boas_praticas_prog2/src/main/java/view/TelaCNPJ.java
+/mnt/c/code/java/boas_praticas_prog2/src/main/java/view/TelaCPF.java
+/mnt/c/code/java/boas_praticas_prog2/src/main/java/view/TelaCadastroCliente.java
+/mnt/c/code/java/boas_praticas_prog2/src/main/java/view/TelaEmail.java
+/mnt/c/code/java/boas_praticas_prog2/src/main/java/view/TelaLerCSV.java
+/mnt/c/code/java/boas_praticas_prog2/src/main/java/view/TelaLogin.java
+/mnt/c/code/java/boas_praticas_prog2/src/main/java/view/TelaPrincipal.java
+/mnt/c/code/java/boas_praticas_prog2/src/main/java/view/TelaRelatorioClientes.java
