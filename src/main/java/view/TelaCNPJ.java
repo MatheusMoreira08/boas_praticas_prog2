@@ -44,7 +44,7 @@ public class TelaCNPJ extends JInternalFrame {
         JButton botaoValidar = new JButton("Validar CNPJ");
         botaoValidar.setFont(new Font("Arial", Font.BOLD, 14));
         botaoValidar.setBackground(new Color(0, 102, 204));
-        botaoValidar.setForeground(Color.WHITE);
+        botaoValidar.setForeground(Color.BLACK);
         botaoValidar.setPreferredSize(new Dimension(150, 40));
         botaoValidar.setFocusPainted(false);
         botaoValidar.addActionListener(e -> validarCNPJ());
@@ -52,7 +52,7 @@ public class TelaCNPJ extends JInternalFrame {
         JButton botaoLimpar = new JButton("Limpar");
         botaoLimpar.setFont(new Font("Arial", Font.BOLD, 14));
         botaoLimpar.setBackground(new Color(100, 100, 100));
-        botaoLimpar.setForeground(Color.WHITE);
+        botaoLimpar.setForeground(Color.BLACK);
         botaoLimpar.setPreferredSize(new Dimension(150, 40));
         botaoLimpar.setFocusPainted(false);
         botaoLimpar.addActionListener(e -> limpar());

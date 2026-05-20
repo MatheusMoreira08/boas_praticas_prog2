@@ -46,21 +46,21 @@ public class TelaLerCSV extends JInternalFrame {
         JButton botaoAtualizar = new JButton("Atualizar");
         botaoAtualizar.setFont(new Font("Arial", Font.BOLD, 12));
         botaoAtualizar.setBackground(new Color(0, 102, 204));
-        botaoAtualizar.setForeground(Color.WHITE);
+        botaoAtualizar.setForeground(Color.BLACK);
         botaoAtualizar.setFocusPainted(false);
         botaoAtualizar.addActionListener(e -> carregarCSV());
 
         JButton botaoCopiar = new JButton("Copiar");
         botaoCopiar.setFont(new Font("Arial", Font.BOLD, 12));
         botaoCopiar.setBackground(new Color(100, 100, 100));
-        botaoCopiar.setForeground(Color.WHITE);
+        botaoCopiar.setForeground(Color.BLACK);
         botaoCopiar.setFocusPainted(false);
         botaoCopiar.addActionListener(e -> copiarConteudo());
 
         JButton botaoFechar = new JButton("Fechar");
         botaoFechar.setFont(new Font("Arial", Font.BOLD, 12));
         botaoFechar.setBackground(new Color(200, 0, 0));
-        botaoFechar.setForeground(Color.WHITE);
+        botaoFechar.setForeground(Color.BLACK);
         botaoFechar.setFocusPainted(false);
         botaoFechar.addActionListener(e -> dispose());
 

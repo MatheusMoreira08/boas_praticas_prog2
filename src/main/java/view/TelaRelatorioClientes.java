@@ -44,21 +44,21 @@ public class TelaRelatorioClientes extends JInternalFrame {
         JButton botaoAtualizar = new JButton("Atualizar Relatório");
         botaoAtualizar.setFont(new Font("Arial", Font.BOLD, 12));
         botaoAtualizar.setBackground(new Color(0, 102, 204));
-        botaoAtualizar.setForeground(Color.WHITE);
+        botaoAtualizar.setForeground(Color.BLACK);
         botaoAtualizar.setFocusPainted(false);
         botaoAtualizar.addActionListener(e -> carregarRelatorio());
 
         JButton botaoExportar = new JButton("Exportar");
         botaoExportar.setFont(new Font("Arial", Font.BOLD, 12));
         botaoExportar.setBackground(new Color(0, 153, 0));
-        botaoExportar.setForeground(Color.WHITE);
+        botaoExportar.setForeground(Color.BLACK);
         botaoExportar.setFocusPainted(false);
         botaoExportar.addActionListener(e -> exportarRelatorio());
 
         JButton botaoFechar = new JButton("Fechar");
         botaoFechar.setFont(new Font("Arial", Font.BOLD, 12));
         botaoFechar.setBackground(new Color(200, 0, 0));
-        botaoFechar.setForeground(Color.WHITE);
+        botaoFechar.setForeground(Color.BLACK);
         botaoFechar.setFocusPainted(false);
         botaoFechar.addActionListener(e -> dispose());
 
@@ -98,14 +98,14 @@ public class TelaRelatorioClientes extends JInternalFrame {
             try (java.io.FileWriter writer = new java.io.FileWriter(fileToSave)) {
                 writer.write(textArea.getText());
                 JOptionPane.showMessageDialog(this,
-                    "Relatório exportado com sucesso!",
-                    "Sucesso",
-                    JOptionPane.INFORMATION_MESSAGE);
+                        "Relatório exportado com sucesso!",
+                        "Sucesso",
+                        JOptionPane.INFORMATION_MESSAGE);
             } catch (java.io.IOException ex) {
                 JOptionPane.showMessageDialog(this,
-                    "Erro ao exportar relatório: " + ex.getMessage(),
-                    "Erro",
-                    JOptionPane.ERROR_MESSAGE);
+                        "Erro ao exportar relatório: " + ex.getMessage(),
+                        "Erro",
+                        JOptionPane.ERROR_MESSAGE);
             }
         }
     }

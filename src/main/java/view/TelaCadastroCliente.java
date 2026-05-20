@@ -72,7 +72,7 @@ public class TelaCadastroCliente extends JInternalFrame {
         botaoSalvar = new JButton("Salvar Cliente");
         botaoSalvar.setFont(new Font("Arial", Font.BOLD, 14));
         botaoSalvar.setBackground(new Color(0, 153, 0));
-        botaoSalvar.setForeground(Color.WHITE);
+        botaoSalvar.setForeground(Color.BLACK);
         botaoSalvar.setPreferredSize(new Dimension(150, 40));
         botaoSalvar.setFocusPainted(false);
         botaoSalvar.addActionListener(e -> salvarCliente());
@@ -80,7 +80,7 @@ public class TelaCadastroCliente extends JInternalFrame {
         botaoLimpar = new JButton("Limpar");
         botaoLimpar.setFont(new Font("Arial", Font.BOLD, 14));
         botaoLimpar.setBackground(new Color(100, 100, 100));
-        botaoLimpar.setForeground(Color.WHITE);
+        botaoLimpar.setForeground(Color.BLACK);
         botaoLimpar.setPreferredSize(new Dimension(150, 40));
         botaoLimpar.setFocusPainted(false);
         botaoLimpar.addActionListener(e -> limpar());
@@ -177,15 +177,15 @@ public class TelaCadastroCliente extends JInternalFrame {
 
         if (clienteService.cadastrarCliente(cliente)) {
             JOptionPane.showMessageDialog(this,
-                "Cliente cadastrado com sucesso!",
-                "Sucesso",
-                JOptionPane.INFORMATION_MESSAGE);
+                    "Cliente cadastrado com sucesso!",
+                    "Sucesso",
+                    JOptionPane.INFORMATION_MESSAGE);
             limpar();
         } else {
             JOptionPane.showMessageDialog(this,
-                "Erro ao salvar cliente.",
-                "Erro",
-                JOptionPane.ERROR_MESSAGE);
+                    "Erro ao salvar cliente.",
+                    "Erro",
+                    JOptionPane.ERROR_MESSAGE);
         }
     }
 

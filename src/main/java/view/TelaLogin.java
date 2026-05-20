@@ -32,52 +32,74 @@ public class TelaLogin extends JInternalFrame {
         panelTitulo.add(titulo);
 
         JPanel panelCampos = new JPanel();
-        panelCampos.setLayout(new GridLayout(3, 2, 10, 15));
+        panelCampos.setLayout(new GridBagLayout());
         panelCampos.setBackground(Color.WHITE);
         panelCampos.setBorder(BorderFactory.createEmptyBorder(20, 40, 20, 40));
+
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(10, 10, 10, 10);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
 
         JLabel labelUsuario = new JLabel("Usuário:");
         labelUsuario.setFont(new Font("Arial", Font.PLAIN, 14));
         labelUsuario.setHorizontalAlignment(SwingConstants.RIGHT);
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.weightx = 0.2;
+        panelCampos.add(labelUsuario, gbc);
 
         campoUsuario = new JTextField();
         campoUsuario.setFont(new Font("Arial", Font.PLAIN, 14));
+        campoUsuario.setPreferredSize(new Dimension(220, 35));
+        gbc.gridx = 1;
+        gbc.gridy = 0;
+        gbc.weightx = 0.8;
+        panelCampos.add(campoUsuario, gbc);
 
         JLabel labelSenha = new JLabel("Senha:");
         labelSenha.setFont(new Font("Arial", Font.PLAIN, 14));
         labelSenha.setHorizontalAlignment(SwingConstants.RIGHT);
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.weightx = 0.2;
+        panelCampos.add(labelSenha, gbc);
 
         campoSenha = new JPasswordField();
         campoSenha.setFont(new Font("Arial", Font.PLAIN, 14));
-
-        JLabel labelEspaco = new JLabel();
-
-        botaoEntrar = new JButton("Entrar");
-        botaoEntrar.setFont(new Font("Arial", Font.BOLD, 14));
-        botaoEntrar.setBackground(new Color(0, 153, 0));
-        botaoEntrar.setForeground(Color.WHITE);
-        botaoEntrar.setFocusPainted(false);
-        botaoEntrar.addActionListener(e -> realizarLogin());
+        campoSenha.setPreferredSize(new Dimension(220, 35));
+        gbc.gridx = 1;
+        gbc.gridy = 1;
+        gbc.weightx = 0.8;
+        panelCampos.add(campoSenha, gbc);
 
         botaoLimpar = new JButton("Limpar");
         botaoLimpar.setFont(new Font("Arial", Font.BOLD, 14));
         botaoLimpar.setBackground(new Color(100, 100, 100));
-        botaoLimpar.setForeground(Color.WHITE);
+        botaoLimpar.setForeground(Color.BLACK);
+        botaoLimpar.setPreferredSize(new Dimension(140, 40));
         botaoLimpar.setFocusPainted(false);
         botaoLimpar.addActionListener(e -> limpar());
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.weightx = 0.5;
+        panelCampos.add(botaoLimpar, gbc);
 
-        panelCampos.add(labelUsuario);
-        panelCampos.add(campoUsuario);
-        panelCampos.add(labelSenha);
-        panelCampos.add(campoSenha);
-        panelCampos.add(labelEspaco);
-        panelCampos.add(botaoLimpar);
-        panelCampos.add(new JLabel());
-        panelCampos.add(botaoEntrar);
+        botaoEntrar = new JButton("Entrar");
+        botaoEntrar.setFont(new Font("Arial", Font.BOLD, 14));
+        botaoEntrar.setBackground(new Color(0, 153, 0));
+        botaoEntrar.setForeground(Color.BLACK);
+        botaoEntrar.setPreferredSize(new Dimension(140, 40));
+        botaoEntrar.setFocusPainted(false);
+        botaoEntrar.addActionListener(e -> realizarLogin());
+        gbc.gridx = 1;
+        gbc.gridy = 2;
+        gbc.weightx = 0.5;
+        panelCampos.add(botaoEntrar, gbc);
 
         JPanel panelInfo = new JPanel();
         panelInfo.setBackground(new Color(240, 240, 240));
-        JLabel labelInfo = new JLabel("<html><center>Usuários disponíveis:<br>admin / 123<br>matheus / 123456<br>usuario / senha123</center></html>");
+        JLabel labelInfo = new JLabel(
+                "<html><center>Usuários disponíveis:<br>admin / 123<br>matheus / 123456<br>usuario / senha123</center></html>");
         labelInfo.setFont(new Font("Arial", Font.PLAIN, 12));
         panelInfo.add(labelInfo);
 
@@ -104,15 +126,15 @@ public class TelaLogin extends JInternalFrame {
 
         if (mensagemErro.isEmpty()) {
             JOptionPane.showMessageDialog(this,
-                "Bem-vindo, " + usuario + "!",
-                "Login Efetuado",
-                JOptionPane.INFORMATION_MESSAGE);
+                    "Bem-vindo, " + usuario + "!",
+                    "Login Efetuado",
+                    JOptionPane.INFORMATION_MESSAGE);
             limpar();
         } else {
             JOptionPane.showMessageDialog(this,
-                mensagemErro,
-                "Erro de Login",
-                JOptionPane.ERROR_MESSAGE);
+                    mensagemErro,
+                    "Erro de Login",
+                    JOptionPane.ERROR_MESSAGE);
         }
     }
 
